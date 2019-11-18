@@ -23,7 +23,6 @@ class _MainHome extends State<MainHome> {
 
   static List<Widget> _pageList = <Widget>[
     MainPage(),
-    //Text('11'),
     Text("이용내역 !!!!"),
     Text('내 정보!!!!'),
   ];
