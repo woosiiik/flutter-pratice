@@ -33,17 +33,8 @@ class _MainHome extends State<MainHome> {
       body: Center(
         child: _pageList.elementAt(_selectedIndex),
       ),
-      bottomNavigationBar: _navigationBar(),
-      floatingActionButton: Visibility(
-        visible: _selectedIndex == 0 ? true : false,
-        child: Padding(
-          padding: const EdgeInsets.only(top: 150.0),
-          child: FloatingActionButton(
-            onPressed: () {},
-            child: Icon(Icons.center_focus_strong),
-          ),
-        ),
-      ),
+      bottomNavigationBar: _buildNavigationBar(),
+      floatingActionButton: _buildFloatingActionButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
     );
   }
@@ -54,7 +45,7 @@ class _MainHome extends State<MainHome> {
     });
   }
 
-  Widget _navigationBar() {
+  Widget _buildNavigationBar() {
     return BottomNavigationBar(
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
@@ -75,4 +66,24 @@ class _MainHome extends State<MainHome> {
       onTap: _onItemTapped,
     );
   }
+
+  Visibility _buildFloatingActionButton() {
+    return Visibility(
+      visible: _selectedIndex == 0 ? true : false,
+      child: Padding(
+        padding: const EdgeInsets.only(top: 150.0),
+        child: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(Icons.filter_center_focus,
+          color: Colors.green),
+          //shape: Border.all(style: BorderStyle.none),
+          backgroundColor: Colors.white,
+          //hoverColor: Colors.blue,
+          //splashColor: Colors.yellow,
+          mini: true,
+        ),
+      ),
+    );
+  }
+
 }
