@@ -52,34 +52,55 @@ class MainPage extends StatelessWidget {
     return ListView.separated(
       padding: const EdgeInsets.all(10),
       itemCount: crList.length,
-      itemBuilder: (BuildContext, int index) {
+      itemBuilder: (BuildContext context, int index) {
         return _buildCredentialItem(crList[index]);
       },
       separatorBuilder: (BuildContext context, int index) => const Divider(),
     );
   }
 
+  /***********************
+   * Credential List Item
+   ***********************/
   Container _buildCredentialItem(Credential credential) {
     return Container(
       child: Row(
         children: [
-          credential.icon,
+          Container(
+            padding: const EdgeInsets.only(left: 10, right: 10),
+            child: credential.icon,
+          ),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Text(credential.name,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Color.fromRGBO(167, 113, 239, 1),
+                    )),
                 Text(
-                  credential.name,
+                  credential.issuer,
                   style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  )
+                    fontSize: 18,
+                    color: Color.fromRGBO(43, 43, 43, 1),
+                  ),
                 ),
-                Text(credential.type),
-                Text('유효기간 ' + credential.expire),
+                Text('유효기간 ' + credential.expire,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Color.fromRGBO(138, 138, 138, 1),
+                    )
+                ),
               ],
             ),
           ),
+          Container(
+            padding: const EdgeInsets.only(right: 20),
+            child: Icon(Icons.arrow_forward_ios),
+          ),
         ],
+
       ),
     );
   }
