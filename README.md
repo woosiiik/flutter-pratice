@@ -1,10 +1,14 @@
 # flutter-pratice
 
-## Flutter ButtonNaviationBar
+#### Flutter Fingerprint authentication using 'local_auth' 
+- /lib/ui/my/mypage.dart
+- pubspec.yaml 
 
-## Flutter TabBar over the ButtonNavigationBar
+#### Flutter ButtonNaviationBar
 
-## Flutter FloatingActionButton with 'FloatingActionButtonLocation' and adjusted position
+#### Flutter TabBar over the ButtonNavigationBar
+
+#### Flutter FloatingActionButton with 'FloatingActionButtonLocation' and adjusted position
 > FloatingActionButton is moved at top-right and moved position down using 'EdgeInsets'
 > FloatingActionButton is shown only first 'NavigationBar' in the 'ButtonNavigationBar' 
 

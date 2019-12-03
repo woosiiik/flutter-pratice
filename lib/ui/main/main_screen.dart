@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pratice1/data/Credential.dart';
 import 'package:flutter_pratice1/manager/CredentialManager.dart';
-
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

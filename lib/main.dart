@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pratice1/ui/main/main_screen.dart';
+import 'package:flutter_pratice1/ui/my/mypage.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,7 +25,7 @@ class _MainHome extends State<MainHome> {
   static List<Widget> _pageList = <Widget>[
     MainPage(),
     Text("이용내역 !!!!"),
-    Text('내 정보!!!!'),
+    MyPage(),
   ];
 
   @override
